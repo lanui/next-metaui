@@ -5,8 +5,9 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box'
 
 import { useSettings } from '../meta-core/hooks/useSettings'
-import VerticalLayout from '../meta-core/layouts/vertical/VerticalLayout'
-import VerticalAppBarContent from '../meta-core/layouts/vertical/appbar'
+import VerticalLayout from '../meta-core/layouts/VerticalLayout'
+
+import VerticalAppBarContent from '@/layouts/vertical/HeaderbarContent'
 
 import VerticalNavItems from '@/navigation/vertical/nav-items'
 

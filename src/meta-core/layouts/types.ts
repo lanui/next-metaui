@@ -37,3 +37,7 @@ export type NavSectionTitle = {
   subject?: string
 }
 export type VerticalNavItemsType = (NavLink | NavSectionTitle)[]
+
+export type BlankLayoutProps = {
+  children: ReactNode
+}
