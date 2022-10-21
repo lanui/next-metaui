@@ -8,6 +8,7 @@ export type LayoutProps = {
   settings: Settings
   children: ReactNode
   saveSettings: (values: Settings) => void
+  verticalNavItems?: VerticalNavItemsType
   scrollToTop?: (props?: any) => ReactNode
   footerContent?: (props?: any) => ReactNode
   verticalAppBarContent?: (props?: any) => ReactNode
@@ -31,7 +32,7 @@ export type NavLink = {
 }
 
 export type NavSectionTitle = {
-  title: string
+  sectionTitle: string
   action?: string
   subject?: string
 }

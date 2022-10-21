@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { Settings } from '../context/SettingsContext'
 import themeOptions from './themeOptions'
 import typography from './typography'
+import overrides from './overrides'
 
 import GlobalStyling from './globalStyles'
 
@@ -23,7 +24,10 @@ const ThemeComponent = (props: Props) => {
   let theme = createTheme(coreThemeConfig)
 
   /* Continue theme creation and pass merged component overrides to CreateTheme function */
-  theme = createTheme(theme, { typography: { ...typography(theme) } })
+  theme = createTheme(theme, {
+    components: { ...overrides(theme) },
+    typography: { ...typography(theme) }
+  })
 
   return (
     <ThemeProvider theme={theme}>

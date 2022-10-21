@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles'
 import Box, { BoxProps } from '@mui/material/Box'
 import { LayoutProps } from '../types'
 
-import Navigation from './navigation'
+import Navigation from '../navigation'
 import themeConfig from '../../../configs/themeConfig'
 
 const VerticalLayoutWrapper = styled('div')({

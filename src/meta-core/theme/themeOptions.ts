@@ -2,7 +2,11 @@ import { deepmerge } from '@mui/utils'
 import { ThemeOptions } from '@mui/material/styles'
 
 import { Settings } from '../context/SettingsContext'
+
 import palette from './palette'
+import spacing from './spacing'
+import breakpoints from './breakpoints'
+import Shadows from './shadows'
 
 const themeOptions = (settings: Settings): ThemeOptions => {
   const { mode, themeColor } = settings
@@ -24,6 +28,17 @@ const themeOptions = (settings: Settings): ThemeOptions => {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"'
       ].join(',')
+    },
+    Shadows: Shadows(mode),
+    ...spacing,
+    breakpoints: breakpoints(),
+    shape: {
+      borderRadius: 6
+    },
+    mixins: {
+      toolbar: {
+        minHeight: 64
+      }
     }
   }
 
